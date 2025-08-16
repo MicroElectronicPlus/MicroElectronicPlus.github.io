@@ -1,2 +1,2 @@
-aliamrollahi.github.io
-Visit: https://aliamrollahi.github.io
+Ali Amrollahi
+https://aliamrollahi.github.io
