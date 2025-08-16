@@ -1,1 +1,239 @@
- Hello !
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>علی امراللهی | مهندس برق</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background: #0b1220;
+      color: #e9eefc;
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3,h4 { margin: 0; }
+
+    body.light {
+      background: #f5f7fb;
+      color: #222;
+    }
+    body.light header, body.light footer {
+      background: #e6eaf5;
+      color: #333;
+    }
+    body.light .card {
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+
+    header {
+      background: #111a34;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo span {
+      font-weight: bold;
+      font-size: 20px;
+      color: #5c8dff;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #a7b1cc;
+      font-size: 14px;
+      transition: color .3s;
+    }
+    nav a:hover { color: #fff; }
+
+    .toggle-btn {
+      cursor: pointer;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      background: #5c8dff;
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(180deg,#0e1a33,#0b1220);
+    }
+    body.light .hero {
+      background: linear-gradient(180deg,#e6eaf5,#f5f7fb);
+    }
+    .hero h1 { font-size: 42px; margin-bottom: 15px; }
+    .hero p { margin-bottom: 30px; }
+
+    .btn {
+      background: linear-gradient(135deg,#5c8dff,#00d2a8);
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-weight: bold;
+      color: #0b1220;
+      border: none;
+      cursor: pointer;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #5c8dff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #111a34;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.1);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.3);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .contact-form button {
+      background: #5c8dff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111a34;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #a7b1cc;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo"><span>علی امراللهی</span></div>
+      <nav>
+        <a href="#">خانه</a>
+        <a href="#about">درباره من</a>
+        <a href="#skills">مهارت‌ها</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#contact">تماس</a>
+      </nav>
+      <button class="toggle-btn" onclick="toggleTheme()">تغییر حالت</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>سلام، من علی امراللهی هستم</h1>
+    <p>مهندس برق | متخصص سیستم‌های قدرت و انرژی‌های تجدیدپذیر</p>
+    <button class="btn">بیشتر بدانید</button>
+  </div>
+
+  <section id="about">
+    <h2>درباره من</h2>
+    <p style="text-align:center;">
+      من مهندس برق با تخصص در سیستم‌های قدرت و بهره‌برداری نیروگاه‌های سیکل ترکیبی هستم.  
+      علاقه‌مند به انرژی‌های تجدیدپذیر، کنترل غیرخطی و بهینه‌سازی.  
+      هدفم افزایش بهره‌وری و توسعه پروژه‌های نوآورانه در صنعت برق است.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>مهارت‌ها</h2>
+    <div class="cards">
+      <div class="card"><h3>بهره‌برداری نیروگاه</h3><p>تجربه کار در نیروگاه سیکل ترکیبی و بخار</p></div>
+      <div class="card"><h3>نرم‌افزارهای برق</h3><p>ETAP ، DIgSILENT ، MATLAB</p></div>
+      <div class="card"><h3>کنترل و اتوماسیون</h3><p>PLC ، SCADA و سیستم‌های کنترل پیشرفته</p></div>
+      <div class="card"><h3>انرژی‌های تجدیدپذیر</h3><p>طراحی و محاسبه نیروگاه‌های خورشیدی</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>پروژه‌ها</h2>
+    <div class="cards">
+      <div class="card"><h3>نیروگاه خورشیدی ۵ مگاواتی</h3><p>طراحی و تحلیل راندمان پنل‌ها</p></div>
+      <div class="card"><h3>بهینه‌سازی مصرف انرژی</h3><p>پروژه کاهش تلفات الکتریکی در شبکه توزیع</p></div>
+      <div class="card"><h3>کنترل تطبیقی</h3><p>مدل‌سازی و پیاده‌سازی کنترل غیرخطی</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تماس با من</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="نام شما" required>
+      <input type="email" placeholder="ایمیل شما" required>
+      <textarea rows="5" placeholder="پیام شما"></textarea>
+      <button type="submit">ارسال پیام</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 علی امراللهی - تمامی حقوق محفوظ است.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      if (document.body.classList.contains('light')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    window.onload = function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light');
+      }
+    }
+  </script>
+
+</body>
+</html>
