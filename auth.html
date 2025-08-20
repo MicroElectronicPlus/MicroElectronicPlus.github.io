@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ورود / ثبت‌نام</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo"><span>علی امراللهی</span></div>
+      <nav>
+        <a href="../index.html">خانه</a>
+        <a href="../about.html">درباره من</a>
+        <a href="../skills.html">مهارت‌ها</a>
+        <a href="../projects.html">پروژه‌ها</a>
+        <a href="../contact.html">تماس</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width:420px;margin:auto">
+    <h2 style="text-align:center">ورود / ثبت‌نام (دمو)</h2>
+    <div class="card" style="padding:20px;border-radius:16px;background:rgba(255,255,255,0.05)">
+      <form id="authForm">
+        <div class="field" style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
+          <label>نام</label>
+          <input name="name" required>
+        </div>
+        <div class="field" style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
+          <label>ایمیل</label>
+          <input name="email" type="email" required>
+        </div>
+        <div class="field" style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <label>رمز عبور</label>
+          <input name="password" type="password" required>
+        </div>
+        <button type="submit" style="padding:12px 16px;border:0;border-radius:12px;background:#5c8dff;color:#fff;cursor:pointer">ثبت‌نام / ورود</button>
+        <div id="msg" style="margin-top:10px"></div>
+      </form>
+    </div>
+  </section>
+
+  <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <script src="../script.js"></script>
+  <script type="module" src="./auth.js"></script>
+  <script type="module">
+    import { saveUser } from './auth.js';
+    const form = document.getElementById('authForm');
+    const msg = document.getElementById('msg');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      saveUser({ name: data.name.trim(), email: data.email.trim() }, data.password);
+      msg.textContent = `خوش آمدی ${data.name}! در حال بازگشت به خانه...`;
+      setTimeout(()=> location.href = '../index.html', 900);
+    });
+  </script>
+</body>
+</html>
