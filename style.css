@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  background: #0b1220;
+  color: #e9eefc;
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+a { text-decoration: none; color: inherit; }
+h1,h2,h3,h4 { margin: 0; }
+body.light { background: #f5f7fb; color: #222; }
+body.light header, body.light footer { background: #e6eaf5; color: #333; }
+header { background: #111a34; position: sticky; top: 0; }
+.nav-container { max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+.logo span { font-weight: bold; font-size: 20px; color: #5c8dff; }
+nav { display: flex; gap: 20px; }
+nav a { color: #a7b1cc; font-size: 14px; transition: color .3s; }
+nav a:hover { color: #fff; }
+section { max-width: 1000px; margin: auto; padding: 60px 20px; }
+section h2 { text-align: center; margin-bottom: 40px; font-size: 28px; color: #5c8dff; }
+footer { background: #111a34; text-align: center; padding: 20px; font-size: 14px; color: #a7b1cc; margin-top: 50px; }
+body.light footer { background: #e6eaf5; color: #555; }
+
+/* دکمه شناور تغییر حالت */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #5c8dff;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 2000;
+}
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* پشتیبانی زبان‌ها */
+body[lang='fa'] { font-family: Tahoma, Arial; direction: rtl; text-align: right; }
+body[lang='en'] { font-family: Arial; direction: ltr; text-align: left; }
